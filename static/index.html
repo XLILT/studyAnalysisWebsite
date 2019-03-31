@@ -1,1 +1,15 @@
-hello html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小太阳专用学情处理工具</title>
+</head>
+<body>
+    <form action="/gen/" enctype="multipart/form-data" method="POST">
+        学情模板文件: <input type="file" name="template"> <br />
+        替换规则文件: <input type="file" name="rule" /> <br />
+
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>
