@@ -26,7 +26,9 @@ SECRET_KEY = 'g4p%t%=wp^n&9ymp$u=nd^97km(ish7y1*1e%%qa-r4@6zynpx'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'uniquefatexl.pythonanywhere.com'
+    'uniquefatexl.pythonanywhere.com',
+    'localhost',
+    '127.0.0.1'
 ]
 
 
@@ -120,3 +122,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/'
+
+STATICFILES_DIRS=(BASE_DIR,'kunpeng/static')
