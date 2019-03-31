@@ -25,7 +25,9 @@ SECRET_KEY = 'g4p%t%=wp^n&9ymp$u=nd^97km(ish7y1*1e%%qa-r4@6zynpx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'uniquefatexl.pythonanywhere.com'
+]
 
 
 # Application definition
