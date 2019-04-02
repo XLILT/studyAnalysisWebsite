@@ -31,18 +31,13 @@ def get_gen_rule(file):
 
     return trans_rule, greet_arr
 
-def gen_study_analysis(raw_content, trans_rule, greet_arr):
-    greet_idx = 0
+def gen_study_analysis(raw_content, trans_rule, greet_arr, row_idx):
+    greet_idx = row_idx % len(greet_arr)
 
     greet_content = ""
     analy_content = ""
-
+	
     greet_content = greet_arr[greet_idx]
-
-    if(greet_idx < len(greet_arr) - 1):
-        greet_idx += 1
-    else:
-        greet_idx = 0
 
     raw_split = raw_content.split()
 
@@ -80,7 +75,7 @@ def translate_workbook_with_template(wb, rule_file):
                 if(row_idx >= 3 and col_idx == ncol - 1):
                     if tabl.cell_type(row_idx, col_idx) == 2:
                         tcell = str(int(tcell))
-                    tcell = gen_study_analysis(tcell, trans_rule, greet_arr)
+                    tcell = gen_study_analysis(tcell, trans_rule, greet_arr, row_idx)
 
                 gtb.write(row_idx, col_idx, tcell)
 
